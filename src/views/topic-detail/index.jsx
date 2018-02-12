@@ -11,7 +11,7 @@ export default class TopicDetail extends React.Component {
 
     render() {
         return (
-            <div>i am detail + {this.props.appState.timer} </div>
+            <div>i am detail + {this.props.appState.msg} </div>
         )
     }
 }
