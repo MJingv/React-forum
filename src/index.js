@@ -6,13 +6,15 @@ import {
     Route,
     Link, Switch
 } from 'react-router-dom'
-
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'mobx-react'
 import appState from './store/app-state'
 
 import TopicList from './views/topic-list/index'
 import TopicDetail from './views/topic-detail/index'
 
+injectTapEventPlugin();
 
 const MyRouter = () => (
     <Provider appState={appState}>
@@ -26,3 +28,4 @@ const MyRouter = () => (
     </Provider>
 )
 ReactDOM.render(<MyRouter/>, document.getElementById('root'));
+registerServiceWorker();
